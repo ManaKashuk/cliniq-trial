@@ -427,7 +427,7 @@ st.markdown(
     f"""
     <div style='text-align:left;'>
         <img src='data:image/png;base64,{logo_base64}' width='650'/>
-        <h5>SOP guidance for CAR‑T and high-toxicity immunotherapy trial exceptions.</i></h5>
+        <h5>SOP Guidance for CAR‑T and High-toxicity Immunotherapy Trial Protocols.</i></h5>
         <p>
              💬 Ask what to do when a study task goes off-script, like a missed visit window or a documentation gap.
         </p>
