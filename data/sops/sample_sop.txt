@@ -1,0 +1,13 @@
+Purpose: Example SOP excerpt for demonstration only.
+Scope: Site-wide.
+
+Adverse Event (AE) Documentation:
+1. Record AE in subject source with date/time, description, and severity per protocol.
+2. Notify PI within required timeframe; document notification.
+3. Complete AE form; cross-reference subject ID (no PHI in this file).
+4. File documents in regulatory binder per indexing rules.
+
+Delegation Log Management:
+1. Maintain current delegation log with role, task scope, start/end dates.
+2. PI approval required prior to task assignment.
+3. Update log upon staff onboarding/offboarding; retain previous versions.
