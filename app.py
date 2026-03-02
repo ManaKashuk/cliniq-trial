@@ -71,7 +71,7 @@ def show_answer_with_logo(answer_html: str, chat_logo_base64: str) -> None:
     st.markdown(
         f"""
         <div style='display:flex;align-items:flex-start;margin:10px 0;'>
-            <img src='data:image/png;base64,{chat_logo_base64}' width='40'
+            <img src='data:image/png;base64,{chat_logo_base64}' width='20'
                  style='margin-right:10px;border-radius:8px;'/>
             <div style='background:#f6f6f6;padding:12px;border-radius:12px;max-width:75%;'>
                 {answer_html}
