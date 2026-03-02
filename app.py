@@ -71,7 +71,7 @@ def show_answer_with_logo(answer_html: str, chat_logo_base64: str) -> None:
     st.markdown(
         f"""
         <div style='display:flex;align-items:flex-start;margin:10px 0;'>
-            <img src='data:image/png;base64,{chat_logo_base64}' width='20'
+            <img src='data:image/png;base64,{chat_logo_base64}' width='50'
                  style='margin-right:10px;border-radius:8px;'/>
             <div style='background:#f6f6f6;padding:12px;border-radius:12px;max-width:75%;'>
                 {answer_html}
@@ -426,7 +426,7 @@ else:
 st.markdown(
     f"""
     <div style='text-align:left;'>
-        <img src='data:image/png;base64,{logo_base64}' width='700'/>
+        <img src='data:image/png;base64,{logo_base64}' width='500'/>
         <h5>SOP guidance for CAR‑T and high-toxicity immunotherapy trial exceptions.</i></h5>
         <p>
              💬 Ask what to do when a study task goes off-script, like a missed visit window or a documentation gap.
