@@ -592,22 +592,6 @@ with tab1:
                 st.session_state.clear_input = True
                 rerun()
 
-    st.markdown("---")
-    st.markdown("### 🔎 SOP evidence (file-level citations)")
-    st.caption(f"Reading SOPs from: `{DATA_DIR}`")
-
-    docs = load_documents(DATA_DIR)
-    vectorizer, matrix, sources, corpus = build_index(docs)
-
-    evidence_query = question.strip() or "CAR-T protocol deviation escalation SOP"
-    snippets = retrieve_snippets(evidence_query, vectorizer, matrix, sources, corpus, k=int(st.session_state.get('evidence_k', 6)))
-    if not snippets:
-        st.info("No SOP evidence found. Add SOP PDFs/TXTs under data/sops (or set SOP_DIR).")
-    else:
-        for i, snip in enumerate(snippets, 1):
-            with st.expander(f"{i}. {snip.source} (relevance {snip.score:.2f})", expanded=(i == 1)):
-                st.text(snip.text or "(no text extracted)")
-
     if st.session_state.chat_history:
         chat_text = ""
         for msg in st.session_state.chat_history:
