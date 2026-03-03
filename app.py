@@ -100,7 +100,7 @@ def require_login():
     # --- Header on login page (matches main app header) ---
     try:
         _logo = Image.open("logo.png")  # keep beside this script
-        st.image(_logo, width=520)
+        st.image(_logo, width=700)
     except Exception:
         st.markdown(f"## {APP_TITLE}")
 
