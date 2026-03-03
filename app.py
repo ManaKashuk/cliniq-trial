@@ -29,7 +29,7 @@ except AttributeError:
 # =========================
 # Config
 # =========================
-APP_TITLE = "CLINIQ"
+APP_TITLE = "CLINIQ: Clinical Intelligence for Integrity & Quality"
 SUPPORT_EMAIL = "help@trial.edu"  # optional; change if needed
 CONTACT_NOTE = f"If you still need help, email <a href='mailto:{SUPPORT_EMAIL}'>{SUPPORT_EMAIL}</a>."
 DISCLAIMER = (
