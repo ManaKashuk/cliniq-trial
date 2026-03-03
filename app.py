@@ -87,7 +87,7 @@ def show_answer_with_logo(answer_html: str, chat_logo_base64: str) -> None:
 # =========================
 def require_login():
     """
-    Fixed-credential login (demo only).
+    credential login (demo only).
     Credentials are validated against values stored in environment variables if present.
     """
     st.session_state.setdefault("is_authed", False)
@@ -139,10 +139,16 @@ def require_login():
 
     # Stop the app here until authenticated
     st.stop()
+        st.markdown("---")
+
+    st.caption(
+        "⚖️ Disclaimer: This is a demo/training tool for SOP navigation and trial operations support. "
+        "It is NOT clinical decision support and does not provide patient-specific medical advice. "
+        "Do not enter PHI/PII. Always confirm with your protocol, site SOPs, and PI/QA."
+    )
+    st.caption("© 2026 CLINIQ Inc. Demo/training tool only (no PHI/PII) ⚖️")
 
     st.stop()
-
-
 
 # =========================
 # SOP Health Check (primary data proof)
