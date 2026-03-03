@@ -139,8 +139,6 @@ def require_login():
 
     # Stop the app here until authenticated
     st.stop()
-        st.markdown("---")
-
     st.caption(
         "⚖️ Disclaimer: This is a demo/training tool for SOP navigation and trial operations support. "
         "It is NOT clinical decision support and does not provide patient-specific medical advice. "
