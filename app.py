@@ -30,7 +30,7 @@ except AttributeError:
 # Config
 # =========================
 APP_TITLE = "CLINIQ"
-SUPPORT_EMAIL = "research.compliance@morgan.edu"  # optional; change if needed
+SUPPORT_EMAIL = "help@trial.edu"  # optional; change if needed
 CONTACT_NOTE = f"If you still need help, email <a href='mailto:{SUPPORT_EMAIL}'>{SUPPORT_EMAIL}</a>."
 DISCLAIMER = (
     "⚖️ Disclaimer: This is a demo/training tool for SOP navigation and trial operations support. "
