@@ -452,7 +452,7 @@ st.markdown(
     f"""
     <div style='text-align:left;'>
         <img src='data:image/png;base64,{logo_base64}' width='700'/>
-        <h4> SOP Guidance for CAR‑T and High-toxicity Immunotherapy Trial Protocols.</i></h5>
+        <h4> SOP Guidance for CAR‑T and Immunotherapy Trial Protocols.</i></h5>
         <p>
             💬 Ask what to do when a study task goes off-script—like a missed visit window or a documentation gap.
         </p>
@@ -715,7 +715,7 @@ st.markdown(
     """
     <hr style="margin-top:0.5rem; margin-bottom:0.5rem;">
     <div style="text-align:center; font-size:0.9rem; color:gray;">
-        © 2026 CLINIQ — demo/training tool only (no PHI/PII)
+       © 2026 CLINIQ INc. — demo/training tool only (no PHI/PII)⚖️
     </div>
     """,
     unsafe_allow_html=True
