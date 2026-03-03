@@ -454,7 +454,7 @@ st.markdown(
         <img src='data:image/png;base64,{logo_base64}' width='700'/>
         <h4> SOP Guidance for CAR‑T and Immunotherapy Trial Protocols.</i></h5>
         <p>
-            💬 Ask what to do when a study task goes off-script—like a missed visit window or a documentation gap.
+            💬 Ask what to do when a study task goes off-script, like a missed visit window or a documentation gap.
         </p>
     </div>
     """,
