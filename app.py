@@ -357,7 +357,10 @@ def download_df_as_csv(df: pd.DataFrame, filename: str, label: str) -> None:
 # =========================
 # Main app
 # =========================
-st.set_page_config(page_title=APP_TITLE, layout="centered")
+from PIL import Image  # (you already have this)
+
+favicon = Image.open("chat.png")  # chat.png must be in the same folder as app.py
+st.set_page_config(page_title=APP_TITLE, page_icon=favicon, layout="centered")
 require_login()
 
 # Load header logo BEFORE login gate
