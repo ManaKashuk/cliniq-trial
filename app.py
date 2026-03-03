@@ -142,7 +142,7 @@ def require_login():
         "It is NOT clinical decision support and does not provide patient-specific medical advice. "
         "Do not enter PHI/PII. Always confirm with your protocol, site SOPs, and PI/QA."
     )
-    st.caption("© 2026 CLINIQ Inc. — demo/training tool only (no PHI/PII) ⚖️")
+    st.caption("© 2026 CLINIQ Inc. Demo/training tool only (no PHI/PII) ⚖️")
 
     # Stop the app here until authenticated
     st.stop()
@@ -704,7 +704,7 @@ st.markdown(
     """
     <hr style="margin-top:0.5rem; margin-bottom:0.5rem;">
     <div style="text-align:center; font-size:0.9rem; color:gray;">
-       © 2026 CLINIQ INc. — demo/training tool only (no PHI/PII)⚖️
+       © 2026 CLINIQ INc. Demo/training tool only (no PHI/PII)⚖️
     </div>
     """,
     unsafe_allow_html=True
