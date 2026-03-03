@@ -87,8 +87,8 @@ def show_answer_with_logo(answer_html: str, chat_logo_base64: str) -> None:
 # =========================
 def require_login():
     """
-    credential login (demo only).
-    Credentials are validated against values stored in environment variables if present.
+    Credential login (demo only).
+    Credentials are validated against values stored in environment variables or Streamlit secrets if present.
     """
     st.session_state.setdefault("is_authed", False)
     st.session_state.setdefault("authed_user", None)
@@ -106,22 +106,20 @@ def require_login():
 
     st.markdown("### 🔒 Authorized User Login")
     st.caption("Access is restricted to approved personnel and affiliates.")
+
     u = st.text_input("Username", key="login_user")
     p = st.text_input("Password", type="password", key="login_pass")
 
-        # Prefer Streamlit secrets/env to avoid committing credentials in public repos
+    # Prefer env/secrets to avoid committing credentials in public repos
     allowed_user = (os.environ.get("CLINIQ_USER") or "").strip()
     allowed_pass = (os.environ.get("CLINIQ_PASS") or "").strip()
 
-    # If running on Streamlit Cloud, you can set these in .streamlit/secrets.toml:
-    # CLINIQ_USER="Mana"
-    # CLINIQ_PASS="pass123"
-    if hasattr(st, "secrets"):
-        try:
-            allowed_user = (allowed_user or str(st.secrets.get("CLINIQ_USER", "")).strip())
-            allowed_pass = (allowed_pass or str(st.secrets.get("CLINIQ_PASS", "")).strip())
-        except Exception:
-            pass
+    # Streamlit Cloud secrets support
+    try:
+        allowed_user = (allowed_user or str(st.secrets.get("CLINIQ_USER", "")).strip())
+        allowed_pass = (allowed_pass or str(st.secrets.get("CLINIQ_PASS", "")).strip())
+    except Exception:
+        pass
 
     # Local fallback (demo only)
     allowed_user = (allowed_user or "Mana").strip()
@@ -131,23 +129,23 @@ def require_login():
         if (u or "").strip() == allowed_user and (p or "").strip() == allowed_pass:
             st.session_state["is_authed"] = True
             st.session_state["authed_user"] = (u or "").strip()
-            st.session_state["user"] = (u or "").strip()  # used by the header caption
+            st.session_state["user"] = (u or "").strip()
             st.success("Logged in.")
             rerun()
         else:
             st.error("Invalid credentials.")
 
-    # Stop the app here until authenticated
-    st.stop()
+    # --- Login page disclaimer/footer (must be BEFORE st.stop()) ---
+    st.markdown("---")
     st.caption(
         "⚖️ Disclaimer: This is a demo/training tool for SOP navigation and trial operations support. "
         "It is NOT clinical decision support and does not provide patient-specific medical advice. "
         "Do not enter PHI/PII. Always confirm with your protocol, site SOPs, and PI/QA."
     )
-    st.caption("© 2026 CLINIQ Inc. Demo/training tool only (no PHI/PII) ⚖️")
+    st.caption("© 2026 CLINIQ Inc. — demo/training tool only (no PHI/PII) ⚖️")
 
+    # Stop the app here until authenticated
     st.stop()
-
 # =========================
 # SOP Health Check (primary data proof)
 # =========================
