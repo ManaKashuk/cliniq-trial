@@ -452,11 +452,9 @@ st.markdown(
     f"""
     <div style='text-align:left;'>
         <img src='data:image/png;base64,{logo_base64}' width='700'/>
-        <h2>🧭 CLINIQ — Trial-Integrity SOP Assistant</h2>
-        <h5><i>Evidence-gated SOP guidance for CAR‑T and high-toxicity immunotherapy trial exceptions</i></h5>
+        <h5>🧭 SOP Guidance for CAR‑T and High-toxicity Immunotherapy Trial Protocols.</i></h5>
         <p>
-            Ask what to do when something goes off‑script (missed window, documentation gap, chain‑of‑custody issue).
-            CLINIQ returns SOP‑anchored steps when it can cite the source; otherwise it should escalate.
+            💬 Ask what to do when a study task goes off-script—like a missed visit window or a documentation gap.
         </p>
     </div>
     """,
