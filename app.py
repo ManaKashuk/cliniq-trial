@@ -122,8 +122,8 @@ def require_login():
         pass
 
     # Local fallback (demo only)
-    allowed_user = (allowed_user or "Mana").strip()
-    allowed_pass = (allowed_pass or "pass123").strip()
+    allowed_user = (allowed_user or "user").strip()
+    allowed_pass = (allowed_pass or "123").strip()
 
     if st.button("Login", type="primary", key="login_btn"):
         if (u or "").strip() == allowed_user and (p or "").strip() == allowed_pass:
