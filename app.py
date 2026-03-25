@@ -122,7 +122,7 @@ def require_login():
         pass
 
     # Local fallback (demo only)
-    allowed_user = (allowed_user or "user").strip()
+    allowed_user = (allowed_user or "GCC").strip()
     allowed_pass = (allowed_pass or "123").strip()
 
     if st.button("Login", type="primary", key="login_btn"):
